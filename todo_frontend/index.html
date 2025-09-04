@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body onload="render()">
+  <h1>Todo-Liste</h1>
+  <form onsubmit="addTodo(); return false;">
+    <input type="text" placeholder="Neues Todo" id="todoInput">
+    <button>Hinzufügen</button>
+  </form>
+
+  <ul id="todoList"></ul>
+
+  <script>
+    let todos = [
+      'Einkaufen'
+    ];
+    function addTodo() {
+      let todoText = document.getElementById("todoInput").value;
+      todos.push(todoText);
+      document.getElementById("todoInput").value = "";
+      save();
+      render();
+    }
+
+    function save() {
+      fetch('http://127.0.0.1/todos', {
+        method: 'PUT',
+        body: JSON.stringify(todos)
+      });
+    }
+
+    function render() {
+      let todoList = document.getElementById("todoList");
+      todoList.innerHTML = "";
+      todos.forEach(element => {
+        let li = document.createElement("li");
+        li.innerText = element;
+        todoList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+
+</html>
