@@ -1,35 +1,35 @@
-# Todo-Liste
+# Todo List
 
-Ein einfaches Todo-Listen-Projekt mit [json-server](https://github.com/typicode/json-server) als Backend und Vanilla JavaScript als Frontend.
+A simple todo list project using [json-server](https://github.com/typicode/json-server) as the backend and Vanilla JavaScript as the frontend.
 
-## Voraussetzungen
+## Prerequisites
 
-- [Node.js](https://nodejs.org/) installiert
+- [Node.js](https://nodejs.org/) installed
 
-## Backend starten
+## Start the Backend
 
-Installiere json-server global:
+Install json-server globally:
 
 ```bash
 npm install -g json-server
 ```
 
-Starte das Backend mit deiner Datenbankdatei:
+Start the backend with your database file:
 
 ```bash
 json-server --watch db.json
 ```
 
-Das Backend läuft jetzt auf [http://localhost:3000](http://localhost:3000).
+The backend is now running at [http://localhost:3000](http://localhost:3000).
 
-## Frontend starten
+## Start the Frontend
 
-Öffne die Datei `index.html` im Browser.
+Open the `index.html` file in your browser.
 
-## Hinweise
+## Notes
 
-- Die Todos werden unter `/todos` bereitgestellt.
-- Änderungen an der Datei `db.json` werden automatisch übernommen.
-- Das Frontend greift über `fetch('http://localhost:3000/todos')` auf die Daten zu.
+- The todos are available at `/todos`.
+- Changes to the `db.json` file are automatically applied.
+- The frontend accesses the data via `fetch('http://localhost:3000/todos')`.
 
 ---
