@@ -39,6 +39,7 @@
     function addToServer(todoText) {
       fetch('http://127.0.0.1:3000/todos', {
         method: 'POST',
+        headers : {"Content-Type": "application/json; charset=UTF-8"},
         body: JSON.stringify({ title: todoText }),
       });
     }
