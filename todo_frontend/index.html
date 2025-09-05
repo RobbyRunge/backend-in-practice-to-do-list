@@ -30,16 +30,16 @@
 
     function addTodo() {
       let todoText = document.getElementById("todoInput").value;
-      todos.push({ text: todoText });
+      todos.push({ title: todoText });
       document.getElementById("todoInput").value = "";
-      save();
+      addToServer(todoText);
       render();
     }
 
-    function save() {
-      fetch('http://127.0.0.1/todos', {
-        method: 'PUT',
-        body: JSON.stringify(todos)
+    function addToServer(todoText) {
+      fetch('http://127.0.0.1:3000/todos', {
+        method: 'POST',
+        body: JSON.stringify({ title: todoText }),
       });
     }
 
