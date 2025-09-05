@@ -1,4 +1,30 @@
 {
-  "todos": ["Milch kaufen", "Eier kaufen", "Brot kaufen", "Butter kaufen"],
-  "completed": ["Eier kaufen", "Butter kaufen"]
+  "todos": [
+    {
+      "id": 1,
+      "title": "Milch kaufen"
+    },
+    {
+      "id": 2,
+      "title": "Eier kaufen"
+    },
+    {
+      "id": 3,
+      "title": "Brot kaufen"
+    },
+    {
+      "id": 4,
+      "title": "Butter kaufen"
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "title": "note 1"
+    },
+    {
+      "id": 2,
+      "title": "note 2"
+    }
+  ]
 }
